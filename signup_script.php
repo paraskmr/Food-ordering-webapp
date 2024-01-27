@@ -10,7 +10,7 @@
     // hash password
     $hashed_password = md5($password);
     $query1 = "SELECT id FROM users WHERE email = '$email' AND password = '$hashed_password'";
-    $query1 = "INSERT INTO users (name, email, password, contact, city, address) VALUES ('$name', '$email', '$hashed_password', '$contact', '$city', '$address')";
+    $query2= "INSERT INTO users (name, email, password, contact, city, address) VALUES ('$name', '$email', '$hashed_password', '$contact', '$city', '$address')";
 
     // check if already registered user
     $result = mysqli_query($conn, $query1);
